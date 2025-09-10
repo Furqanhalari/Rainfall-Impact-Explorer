@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rainfall Impact Explorer - Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/dashboard.css">
+</head>
+<body>
+
+  <!-- Enhanced Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-info" href="/">🌧 Rainfall Impact Explorer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav
+
+  <!-- Enhanced Hero Section -->
+  <header class="dashboard-hero">
+    <div class="container">
+      <h1 class="loading"><i class="fas fa-chart-line"></i> Rainfall Dashboard</h1>
+      <p class="loading">Comprehensive analysis of rainfall patterns, economic damage, and human impact in Pakistan (2001-2024)</p>
+    </div>
+  </header>
+
+  <!-- Key Statistics -->
+  <section class="py-4" style="background: rgba(0,0,0,0.2);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="stats-card">
+            <span class="stats-number">24</span>
+            <span class="stats-label">Years of Data</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <span class="stats-number">2010</span>
+            <span class="stats-label">Deadliest Flood Year</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <span class="stats-number">2022</span>
+            <span class="stats-label">Highest Economic Loss</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card">
+            <span class="stats-number">0.52</span>
+            <span class="stats-label">Rainfall-Death Correlation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Charts Section -->
+  <section class="chart-section">
+    <div class="container">
+      <div class="row g-5 row equal-cards">
+
+       <!-- Time Series Analysis -->
+        <div class="col-lg-6">
+        <div class="chart-card loading">
+            <h4 class="chart-title"><i class="fas fa-line-chart"></i> Rainfall vs Damage Trends (2001–2024)</h4>
+            <div class="chart-container">
+            <img src="static/plots/rainfall_trend.png" alt="Rainfall vs Damage Time Series" class="img-fluid">
+            </div>
+            <div class="analysis-section">
+            <div class="analysis-title">
+                <i class="fas fa-chart-line"></i> Temporal Analysis
+            </div>
+            <div class="analysis-content">
+                <ul>
+                <li>The time series highlights a <strong>complex relationship</strong> between rainfall patterns and flood damage in Pakistan (2001–2024).</li>
+                <li>It identifies <strong>two catastrophic flood events</strong> that shaped the country’s flood risk profile:
+                    <ul>
+                    <li><strong>2010 Floods</strong> → highest death toll (~2,000 fatalities).</li>
+                    <li><strong>2022 Floods</strong> → peak economic devastation (~4.4 trillion PKR in damages).</li>
+                    </ul>
+                </li>
+                <li><strong>Key Insight:</strong> Damage severity doesn’t always increase with rainfall volume.</li>
+                <li>The <strong>2022 floods</strong> caused massive economic losses despite only moderate rainfall.</li>
+                <li>Contributing factors to flood impact severity include:
+                    <ul>
+                    <li>Infrastructure vulnerability</li>
+                    <li>Population density</li>
+                    <li>Climate change adaptation</li>
+                    </ul>
+                </li>
+                <!-- 🔹 New Bullet 1 -->
+                <li><strong>Regional variation:</strong> Some provinces experienced disproportionate impacts due to differences in geography and preparedness.</li>
+                <!-- 🔹 New Bullet 2 -->
+                <li><strong>Long-term trend:</strong> Despite fluctuations, economic losses show an upward trajectory, reflecting growing exposure of assets in flood-prone areas.</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+        <!-- Bubble Scatter Analysis -->
+        <div class="col-lg-6">
+        <div class="chart-card loading">
+            <h4 class="chart-title"><i class="fas fa-dot-circle"></i> Multi-Dimensional Impact Analysis</h4>
+            <div class="chart-container">
+            <img src="static/plots/bubble scatter.png" alt="Bubble Scatter Plot" class="img-fluid">
+            </div>
+            <div class="analysis-section">
+            <div class="analysis-title">
+                <i class="fas fa-search"></i> Bubble Pattern Insights
+            </div>
+            <div class="analysis-content">
+                <ul>
+                <li>The chart displays <strong>rainfall intensity, economic damage, and human casualties</strong> together for a comprehensive view.</li>
+                <li>Each bubble’s size represents the <strong>death toll</strong>, enabling a three-dimensional perspective.</li>
+                <li><strong>Critical Pattern:</strong> 
+                    <ul>
+                    <li>2010 event: Maximum human cost (largest bubble) but moderate economic damage.</li>
+                    <li>2022 event: Extreme economic impact with relatively fewer casualties.</li>
+                    </ul>
+                </li>
+                <li>Three distinct flood event clusters identified:
+                    <ul>
+                    <li><strong>High-rainfall/low-impact events</strong> (bottom right).</li>
+                    <li><strong>Moderate-rainfall/catastrophic-impact events</strong> (e.g., 2022).</li>
+                    <li><strong>Outlier event (2010)</strong>: High mortality + significant economic damage.</li>
+                    </ul>
+                </li>
+                <li>Insights suggest Pakistan’s flood resilience has evolved:
+                    <ul>
+                    <li>Better early warning systems reduce casualties.</li>
+                    <li>Economic vulnerability is rising due to infrastructure expansion in flood-prone areas.</li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+        <!-- Correlation Heatmap -->
+        <div class="col-12">
+          <div class="chart-card loading">
+            <h4 class="chart-title"><i class="fas fa-th"></i> Comprehensive Correlation Matrix</h4>
+            <div class="chart-container">
+              <img src="static/plots/heatmap.png" alt="Correlation Heatmap" class="img-fluid">
+            </div>
+            <div class="analysis-section">
+              <div class="analysis-title">
+                <i class="fas fa-network-wired"></i> Statistical Relationship Analysis
+              </div>
+              <div class="analysis-content">
+                The correlation matrix reveals the interconnected nature of flood impacts across multiple dimensions. This analysis uncovers several <strong>counter-intuitive relationships</strong> that challenge conventional assumptions about flood dynamics.
+
+                <div class="row mt-3">
+                  <div class="col-md-6">
+                    <div class="key-insight">
+                      <strong>Strong Positive Correlations (>0.7):</strong>
+                      <ul style="margin: 10px 0; padding-left: 20px; color: #e0e0e0;">
+                        <li>Deaths ↔ Injuries (0.720): Expected direct relationship</li>
+                        <li>Deaths ↔ Affected Population (0.902): High human impact correlation</li>
+                        <li>Injuries ↔ Affected Population (0.914): Comprehensive impact measure</li>
+                        <li>Economic Damage ↔ Affected Population (0.974): Strong socioeconomic link</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="key-insight">
+                      <strong>Surprising Insights:</strong>
+                      <ul style="margin: 10px 0; padding-left: 20px; color: #e0e0e0;">
+                        <li>Rainfall ↔ Deaths (0.522): <em>Moderate correlation suggests other factors matter more</em></li>
+                        <li>Rainfall ↔ Economic Damage (0.445): <em>Weak link indicates infrastructure/development patterns drive costs</em></li>
+                        <li>Homelessness shows <strong>negative correlations</strong> with most impacts, suggesting data collection challenges or different causation patterns</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="key-insight mt-3">
+                  <strong>Policy Implication:</strong> The relatively weak correlation between rainfall and economic damage (0.445) suggests that <em>flood preparedness, infrastructure quality, and land-use planning</em> may be more critical factors in determining economic impact than the raw intensity of rainfall events.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <h5><i class="fas fa-cloud-rain"></i> Rainfall Impact Explorer</h5>
+        <p>Advanced analytics platform for understanding climate-related disaster impacts in Pakistan</p>
+        <p><strong>Data Source:</strong> Pakistan Disaster Management Authority | <strong>Analysis Period:</strong> 2001-2024</p>
+        <small class="d-block mt-3">
+          <i class="fas fa-copyright"></i> 2025 Rainfall Impact Explorer | 
+          Enhanced Statistical Visualization Platform
+        </small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Add loading animation
+    document.addEventListener('DOMContentLoaded', function() {
+      const loadingElements = document.querySelectorAll('.loading');
+      loadingElements.forEach((el, index) => {
+        setTimeout(() => {
+          el.style.opacity = '1';
+        }, index * 200);
+      });
+    });
+
+    // Add smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

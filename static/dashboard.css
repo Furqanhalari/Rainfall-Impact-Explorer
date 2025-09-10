@@ -1,0 +1,305 @@
+/* Enhanced Professional Styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  background-attachment: fixed;
+  color: #e8e8e8;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  padding: 1rem 0;
+  font-size: 1.05rem;
+}
+
+.nav-item{
+  padding: 0 0.8rem;
+}
+
+.equal-cards {
+  display: flex;
+  align-items: stretch; /* makes columns equal height */
+}
+
+.equal-cards .col-lg-6 {
+  display: flex; /* makes inner content stretch */
+}
+
+.equal-cards .chart-card {
+  flex: 1; /* force equal height */
+  display: flex;
+  flex-direction: column; /* keeps content flowing naturally */
+}
+
+.chart-container img {
+  height: 370px;   /* adjust until both charts look equal */
+  object-fit: contain; /* keeps proportions, no stretching */
+  width: 100%; /* responsive scaling */
+} 
+
+/* Hero Section Enhancement */
+.dashboard-hero {
+  background: linear-gradient(135deg, 
+    rgba(0, 188, 212, 0.1) 0%,
+    rgba(26, 26, 46, 0.95) 40%,
+    rgba(10, 10, 10, 0.98) 100%);
+  padding: 100px 20px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(0, 188, 212, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(77, 208, 225, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(0, 188, 212, 0.06) 0%, transparent 50%);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.dashboard-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #00bcd4, #4dd0e1, #26c6da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 8px 32px rgba(0, 188, 212, 0.3);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.dashboard-hero p {
+  font-size: 1.3rem;
+  color: #c0c0c0;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Professional Chart Cards */
+.chart-section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.chart-card {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.01) 50%,
+    rgba(0, 0, 0, 0.1) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(20px);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 2px 8px rgba(0, 188, 212, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.chart-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00bcd4, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(0, 188, 212, 0.3);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 8px 32px rgba(0, 188, 212, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.chart-card:hover::before {
+  opacity: 1;
+}
+
+.chart-title {
+  color: #00bcd4;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(0, 188, 212, 0.2);
+  position: relative;
+}
+
+.chart-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(45deg, #00bcd4, #4dd0e1);
+  border-radius: 1px;
+}
+
+.chart-container {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.chart-card img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.chart-card:hover img {
+  transform: scale(1.02);
+}
+
+/* Analysis Section */
+.analysis-section {
+  margin-top: 20px;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border-left: 4px solid #00bcd4;
+}
+
+.analysis-title {
+  color: #4dd0e1;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.analysis-content {
+  color: #d0d0d0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.analysis-content strong {
+  color: #00bcd4;
+}
+
+.key-insight {
+  background: rgba(0, 188, 212, 0.1);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 3px solid #00bcd4;
+}
+
+/* Stats Cards */
+.stats-card {
+  background: linear-gradient(135deg, rgba(0, 188, 212, 0.1), rgba(77, 208, 225, 0.05));
+  border: 1px solid rgba(0, 188, 212, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.stats-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #00bcd4;
+  display: block;
+}
+
+.stats-label {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Enhanced Footer */
+.footer {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(26, 26, 46, 0.8));
+  border-top: 1px solid rgba(0, 188, 212, 0.3);
+  padding: 40px 0 30px;
+  margin-top: 60px;
+  backdrop-filter: blur(10px);
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer h5 {
+  color: #00bcd4;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  color: #b0b0b0;
+  margin-bottom: 8px;
+}
+
+.footer small {
+  color: #808080;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .dashboard-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .chart-card {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Loading Animation */
+.loading {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
