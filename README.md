@@ -18,9 +18,8 @@ The app has **two pages**:
 ---
 
 ## 📽️ Demo
-Two demo videos are shared on LinkedIn:  
-1. Code walkthrough (data cleanup → merging → visualizations → Flask + frontend)  
-2. Web app demo (homepage + dashboard)  
+One demo video is shared on LinkedIn:  
+1. Code walkthrough (data cleanup → merging → visualizations → Flask + frontend) + Web app demo (homepage + dashboard)
 
 ---
 
